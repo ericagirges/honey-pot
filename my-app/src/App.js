@@ -1,6 +1,6 @@
 import "./App.css";
 import { NavLink, Switch, Route } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 
 import LandingPage from "./components/LandingPage";
 import Accessories from "./components/Accessories";
@@ -9,55 +9,120 @@ import Beauty from "./components/Beauty";
 import Collectibles from "./components/Collectibles";
 import Cart from "./components/Cart";
 
-const StyledHeader = styled.header `
+const StyledHeader = styled.header`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-`
+  justify-content: space-between;
+  margin: 20px 20px 0 20px;
+  font-family: "Lato";
+  font-size: 1em;
+  font-weight: 700;
+`;
+const FreeShipping = styled.p`
+  width: 180px;
+  color: #5b3610;
+`;
 
-const StyledLogo = styled.h1 `
-  margin: 0 auto;
-`
-
-const CartIcon = styled.img `
-  width: 50px;
+const StyledLogo = styled.img`
+  width: 200px;
   height: auto;
-`
+`;
 
-const StyledNav = styled.nav `
+const CartIcon = styled.img`
+  width: 40px;
+  height: auto;
+  padding: 0 60px;
+`;
+
+const StyledNav = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #B29C88;
+  background-color: #b29c88;
   margin-top: 20px;
   height: 70px;
-
-`
+  font-family: "Lato";
+`;
 
 function App() {
   return (
     <div className="App">
       <StyledHeader>
-        <StyledLogo>
-          <img
+        <FreeShipping>Free Shipping on Orders over $25</FreeShipping>
+        <h1>
+          <StyledLogo
             src="./honeypot-logo.png"
             alt="honeypot logo in yellow and brown. Letter O is replaced with an icon of a beehive"
           />
-        </StyledLogo>
-        <div>
-        <NavLink style={{margin: "auto 0", padding: "0 30px"}} to="/shopping-cart">
+        </h1>
+        <NavLink to="/shopping-cart">
           <CartIcon src="./shopping-cart.png" alt="brown shopping cart icon" />
         </NavLink>
-        </div>
-        <StyledNav>
-          <NavLink style={{padding: "0 20px", textDecoration: "none", alignSelf: "center"}} exact to="/">New</NavLink>
-          <NavLink style={{padding: "0 20px", textDecoration: "none", alignSelf: "center"}} to="/accessories">Accessories</NavLink>
-          <NavLink style={{padding: "0 20px", textDecoration: "none", alignSelf: "center"}} to="/home-goods">Home</NavLink>
-          <NavLink style={{padding: "0 20px", textDecoration: "none", alignSelf: "center"}} to="/beauty">Beauty</NavLink>
-          <NavLink style={{padding: "0 20px", textDecoration: "none", alignSelf: "center"}} to="/collectibles">Collectibles</NavLink>
-        </StyledNav>
       </StyledHeader>
+      <StyledNav>
+        <NavLink
+          style={{
+            padding: "0 50px",
+            textDecoration: "none",
+            alignSelf: "center",
+            color: "black",
+            textTransform: "uppercase",
+          }}
+          exact
+          to="/"
+        >
+          New
+        </NavLink>
+        <NavLink
+          style={{
+            padding: "0 50px",
+            textDecoration: "none",
+            alignSelf: "center",
+            color: "black",
+            textTransform: "uppercase",
+          }}
+          to="/accessories"
+        >
+          Accessories
+        </NavLink>
+        <NavLink
+          style={{
+            padding: "0 50px",
+            textDecoration: "none",
+            alignSelf: "center",
+            color: "black",
+            textTransform: "uppercase",
+          }}
+          to="/home-goods"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          style={{
+            padding: "0 50px",
+            textDecoration: "none",
+            alignSelf: "center",
+            color: "black",
+            textTransform: "uppercase",
+          }}
+          to="/beauty"
+        >
+          Beauty
+        </NavLink>
+        <NavLink
+          style={{
+            padding: "0 50px",
+            textDecoration: "none",
+            alignSelf: "center",
+            color: "black",
+            textTransform: "uppercase",
+          }}
+          to="/collectibles"
+        >
+          Collectibles
+        </NavLink>
+      </StyledNav>
+
       <Switch>
         <Route exact path="/">
           <LandingPage />
