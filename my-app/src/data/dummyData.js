@@ -1,48 +1,52 @@
 const accessories = [
     {
         id: 101,
-        name: "Loungefly Disney The Three Caballeros Figural Mini Backpack",
-        productImg: "./3-caballeros-loungefly.png",
+        name: "Loungefly Barbie Mini Backpack",
+        productImg: "./accessories/Loungefly-Barbie.png",
     },
     {
         id: 102,
-        name: "Loungefly Disney 101 Dalmatians Cookie Mini Backpack",
-        productImg: "./dalmations-loungelfy.png"
+        name: "Loungefly Monster's Inc Mike Wazowski Mini Backpack",
+        productImg: "./accessories/Loungefly-Monsters-Inc.png"
     },
     {
         id: 103,
-        name: "Nintendo Animal Crossing Fruits & Leaves Scrunchy Set",
-        productImg: "./animal-crossing.png"
+        name: "The Office Socks 6-Pack",
+        productImg: "./accessories/The-Office-Socks.png"
     },
     {
         id: 104,
-        name: "The Office Schrute Farms Cap",
-        productImg: "./shrute-farm.png"
+        name: "Animal Crossing Tom Nook Dad Cap",
+        productImg: "./accessories/Tom-Nook-Cap.png"
     },
-    {
-        id: 105,
-        name: "Taco Bell Logo Cap",
-        productImg: ""
-    }
 
 ];
 
 const home = [
     {
+        id: 105,
+        name: "Marvel Avengers Infinity Gauntlet Mug",
+        productImg: "./home-goods/infinity-gauntlet-mug.png"
+    },
+    {
         id: 106,
-        name: "Our Universe Studio Ghibli Kiki's Delivery Service Flying Throw"
+        name: "Dragon Ball Z Ceramic Bowl Mug with Lid ",
+        productImg: "./home-goods/Dragonball-Bowl.png"
     },
     {
         id: 107,
-        name: "Studio Ghibli Spirited Away Haku Ramen Bowl with Chopsticks"
+        name: "Spongebob Squarepants Patrick and Spongebob Salt and Pepper Shakers",
+        productImg: "./home-goods/Spongebob-Salt-Pepper-Shaker.png"
     },
     {
         id: 108,
-        name: "SpongeBob SquarePants 2-Slice Toaster"
+        name: "Taco Bell Throw Blanket 45x60",
+        productImg: "./home-goods/Taco-Bell-Blanket.png"
     },
     {
         id: 109,
-        name: "Winking Boba Beverage Tumbler"
+        name: "Blockbuster Throw Blanket 45x60",
+        productImg: "./home-goods/blockbuster-blanket.png"
     }
 
 ];
@@ -50,19 +54,23 @@ const home = [
 const collectibles = [
     {
         id: 110,
-        name: "Loungefly Disney Mulan Blind Box Enamel Pin"
+        name: "Funko Pop! Avatar Aang with Momo",
+        productImg: "./collectibles/Avatar-Aang-Funk-Pop.png"
     },
     {
         id: 111,
-        name: "Funko Pop! Pin Dragon Ball Z Blind Box Enamel Pin"
+        name: "Funko Pop! Deluxe Star Wars: The Mandalorian - The Child with Canister",
+        productImg: "./collectibles/Funko-Pop-The-Child.png"
     },
     {
         id: 112,
-        name: "Funko Pop! WWE Mr. T Vinyl Figure"
+        name: "Studio Ghibli via Bluefin Ensky Kiki's Delivery Service Jiji Stacking Figure",
+        productImg:"./collectibles/Kikis-Delivery-Figurine.png"
     },
     {
         id: 113,
-        name: "Funko Pop! Ad Icons Original Kool-Aid Packet Vinyl Figure"
+        name: "PowerA Mario Kart Collector Pins",
+        productImg: "./collectibles/mario-kart-pins.png"
     }
 
 ];
@@ -70,19 +78,23 @@ const collectibles = [
 const beauty = [
     {
         id: 114,
-        name: "Loungefly Beetlejuice Sandworm Makeup Brush Set & Holder"
+        name: "Sailor Moon Makeup Brushes Set",
+        productImg: "./beauty/Sailor-Moon-Makeup-brushes.png"
     },
     {
         id: 115,
-        name: "General Mills Breakfast Pack Lip Balm"
+        name: "Gudetama Lip Balm",
+        productImg: "./beauty/Gudetama-Lip-Balm.png"
     },
     {
         id: 116,
-        name: "Friend Central Perk Coffee Lip Scrub"
+        name: "Friends Central Perk Coffee Lip Balm Vanilla Flavor",
+        productImg: "./beauty/Central-Perk-Lip-Balm.png"
     },
     {
         id: 117,
-        name: "Disney Princess Jasmine Whole New World Face Mask"
+        name: "Pokemon Eevee Evolutions Makeup Brushes Set",
+        productImg: "./beauty/Pokemon-Eevee-Brushes.png"
     }
 
 ];

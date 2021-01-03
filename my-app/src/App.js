@@ -13,10 +13,11 @@ const StyledHeader = styled.header`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 20px 0 20px;
+  padding: 20px;
   font-family: "Lato";
   font-size: 1em;
   font-weight: 700;
+  /* background-color: #d8cdc3; */
 `;
 const FreeShipping = styled.p`
   width: 180px;
@@ -38,7 +39,8 @@ const StyledNav = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #b29c88;
+  border-top: 2px solid #B19C87;
+  border-bottom: 2px solid #B19C87;
   margin-top: 20px;
   height: 70px;
   font-family: "Lato";
@@ -71,7 +73,7 @@ function App() {
           exact
           to="/"
         >
-          New
+          Deals
         </NavLink>
         <NavLink
           style={{
