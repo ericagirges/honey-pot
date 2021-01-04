@@ -46,7 +46,34 @@ const StyledNav = styled.nav`
   font-family: "Lato";
 `;
 
+const StyledFooter = styled.footer `
+  background-color: #B19C87;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+`
+
+const StyledCopyright = styled.p `
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: "Lato";
+  color: white;
+  font-size: 1.0em;
+`
+
+const StyledSocial = styled.section `
+  margin-top: 20px;
+  margin-right: 70px;
+  width: 200px;
+  text-align: left;
+  font-family: "Lato";
+  color: white;
+  font-size: 1.2em;
+`
+
 function App() {
+
   return (
     <div className="App">
       <StyledHeader>
@@ -145,6 +172,12 @@ function App() {
           <Cart />
         </Route>
       </Switch>
+      <StyledFooter>
+        <StyledCopyright>HoneyPot<span>{'\u00A9'}</span></StyledCopyright>
+        <StyledSocial>
+          <h6>Follow us</h6>
+        </StyledSocial>
+      </StyledFooter>
     </div>
   );
 }

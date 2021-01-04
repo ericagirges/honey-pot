@@ -3,21 +3,33 @@ const accessories = [
         id: 101,
         name: "Loungefly Barbie Mini Backpack",
         productImg: "./accessories/Loungefly-Barbie.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 102,
         name: "Loungefly Monster's Inc Mike Wazowski Mini Backpack",
-        productImg: "./accessories/Loungefly-Monsters-Inc.png"
+        productImg: "./accessories/Loungefly-Monsters-Inc.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 103,
         name: "The Office Socks 6-Pack",
-        productImg: "./accessories/The-Office-Socks.png"
+        productImg: "./accessories/The-Office-Socks.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 104,
         name: "Animal Crossing Tom Nook Dad Cap",
-        productImg: "./accessories/Tom-Nook-Cap.png"
+        productImg: "./accessories/Tom-Nook-Cap.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
 
 ];
@@ -26,27 +38,42 @@ const home = [
     {
         id: 105,
         name: "Marvel Avengers Infinity Gauntlet Mug",
-        productImg: "./home-goods/infinity-gauntlet-mug.png"
+        productImg: "./home-goods/infinity-gauntlet-mug.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 106,
         name: "Dragon Ball Z Ceramic Bowl Mug with Lid ",
-        productImg: "./home-goods/Dragonball-Bowl.png"
+        productImg: "./home-goods/Dragonball-Bowl.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 107,
         name: "Spongebob Squarepants Patrick and Spongebob Salt and Pepper Shakers",
-        productImg: "./home-goods/Spongebob-Salt-Pepper-Shaker.png"
+        productImg: "./home-goods/Spongebob-Salt-Pepper-Shaker.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 108,
         name: "Taco Bell Throw Blanket 45x60",
-        productImg: "./home-goods/Taco-Bell-Blanket.png"
+        productImg: "./home-goods/Taco-Bell-Blanket.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 109,
         name: "Blockbuster Throw Blanket 45x60",
-        productImg: "./home-goods/blockbuster-blanket.png"
+        productImg: "./home-goods/blockbuster-blanket.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     }
 
 ];
@@ -55,22 +82,34 @@ const collectibles = [
     {
         id: 110,
         name: "Funko Pop! Avatar Aang with Momo",
-        productImg: "./collectibles/Avatar-Aang-Funk-Pop.png"
+        productImg: "./collectibles/Avatar-Aang-Funk-Pop.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 111,
         name: "Funko Pop! Deluxe Star Wars: The Mandalorian - The Child with Canister",
-        productImg: "./collectibles/Funko-Pop-The-Child.png"
+        productImg: "./collectibles/Funko-Pop-The-Child.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 112,
         name: "Studio Ghibli via Bluefin Ensky Kiki's Delivery Service Jiji Stacking Figure",
-        productImg:"./collectibles/Kikis-Delivery-Figurine.png"
+        productImg:"./collectibles/Kikis-Delivery-Figurine.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 113,
         name: "PowerA Mario Kart Collector Pins",
-        productImg: "./collectibles/mario-kart-pins.png"
+        productImg: "./collectibles/mario-kart-pins.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     }
 
 ];
@@ -79,22 +118,34 @@ const beauty = [
     {
         id: 114,
         name: "Sailor Moon Makeup Brushes Set",
-        productImg: "./beauty/Sailor-Moon-Makeup-brushes.png"
+        productImg: "./beauty/Sailor-Moon-Makeup-brushes.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 115,
         name: "Gudetama Lip Balm",
-        productImg: "./beauty/Gudetama-Lip-Balm.png"
+        productImg: "./beauty/Gudetama-Lip-Balm.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 116,
         name: "Friends Central Perk Coffee Lip Balm Vanilla Flavor",
-        productImg: "./beauty/Central-Perk-Lip-Balm.png"
+        productImg: "./beauty/Central-Perk-Lip-Balm.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     },
     {
         id: 117,
         name: "Pokemon Eevee Evolutions Makeup Brushes Set",
-        productImg: "./beauty/Pokemon-Eevee-Brushes.png"
+        productImg: "./beauty/Pokemon-Eevee-Brushes.png",
+        originalPrice: "",
+        salePrice: "",
+        description: ""
     }
 
 ];
