@@ -17,34 +17,62 @@ const StyledHeader = styled.header`
   font-family: "Lato";
   font-size: 1em;
   font-weight: 700;
+  @media(max-width: 600px) {
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 0 5px 0;
+  } 
   /* background-color: #d8cdc3; */
 `;
 const FreeShipping = styled.p`
   width: 180px;
   color: #5b3610;
+  display: block;
+  @media(max-width: 600px) {
+    display: none;
+  }
 `;
 
 const StyledLogo = styled.img`
   width: 200px;
-  height: auto;
+  height: auto; 
 `;
 
 const CartIcon = styled.img`
   width: 40px;
   height: auto;
   padding: 0 60px;
+  @media(max-width: 600px) {
+    margin-bottom: 0;
+    margin-
+  }
 `;
 
 const StyledNav = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   border-top: 2px solid #B19C87;
   border-bottom: 2px solid #B19C87;
   margin-top: 20px;
   height: 70px;
   font-family: "Lato";
+  @media(max-width: 500px) {
+    font-size: 1.0em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 150px;
+    justify-content: space-evenly;
+  }
 `;
+
+const StyledH1 = styled.h1 `
+  @media(max-width: 600px) {
+    padding: 20px 0;
+  } 
+`
 
 const StyledFooter = styled.footer `
   background-color: #B19C87;
@@ -78,12 +106,12 @@ function App() {
     <div className="App">
       <StyledHeader>
         <FreeShipping>Free Shipping on Orders over $25</FreeShipping>
-        <h1>
+        <StyledH1>
           <StyledLogo
             src="./honeypot-logo.png"
             alt="honeypot logo in yellow and brown. Letter O is replaced with an icon of a beehive"
           />
-        </h1>
+        </StyledH1>
         <NavLink to="/shopping-cart">
           <CartIcon src="./shopping-cart.png" alt="brown shopping cart icon" />
         </NavLink>
