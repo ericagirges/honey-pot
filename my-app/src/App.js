@@ -134,12 +134,12 @@ function App() {
         <FreeShipping>Free Shipping on Orders over $25</FreeShipping>
         <StyledH1>
           <StyledLogo
-            src="./honeypot-logo.png"
+            src="/honeypot-logo.png"
             alt="honeypot logo in yellow and brown. Letter O is replaced with an icon of a beehive"
           />
         </StyledH1>
         <NavLink to="/shopping-cart">
-          <CartIcon src="./shopping-cart.png" alt="brown shopping cart icon" />
+          <CartIcon src="/shopping-cart.png" alt="brown shopping cart icon" />
         </NavLink>
       </StyledHeader>
       <StyledNav>
