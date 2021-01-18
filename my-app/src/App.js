@@ -1,6 +1,14 @@
 import "./App.css";
+import React, { useState } from 'react';
 import { NavLink, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
+import { accessories, home, collectibles, beauty } from "./data/dummyData";
+
+import BeautyContext from "./contexts/BeautyContext";
+import CollectiblesContext from "./contexts/CollectiblesContext";
+import AccessoriesContext from "./contexts/AccessoriesContext";
+import HomeGoodsContext from "./contexts/HomeGoodsContext";
+import CartContext from "./contexts/CartContext";
 
 import LandingPage from "./components/LandingPage";
 import Accessories from "./components/Accessories";
@@ -9,6 +17,8 @@ import Beauty from "./components/Beauty";
 import Collectibles from "./components/Collectibles";
 import Cart from "./components/Cart";
 
+
+// styling for heading/nav starts
 const StyledHeader = styled.header`
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +55,7 @@ const CartIcon = styled.img`
   padding: 0 60px;
   @media(max-width: 600px) {
     margin-bottom: 0;
-    margin-
+    /* margin- */
   }
 `;
 
@@ -99,8 +109,24 @@ const StyledSocial = styled.section `
   color: white;
   font-size: 1.2em;
 `
+// styling for heading/nav ends
 
 function App() {
+  // data for each product category
+  const [accProducts] = useState(accessories);
+  const [beautyProducts] = useState(beauty);
+  const [collectProducts] = useState(collectibles);
+  const [homeProducts] = useState(home);
+  // adding items to cart state
+  const [cart, setCart] = useState([]);
+
+  const addItem = item => {
+		// add the selected item to the cart
+		setCart([
+			...cart,
+			item
+		])
+	};
 
   return (
     <div className="App">
@@ -184,21 +210,31 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
+        <AccessoriesContext.Provider value={{accProducts, addItem}}>
         <Route path="/accessories">
           <Accessories />
         </Route>
+        </AccessoriesContext.Provider>
+        <HomeGoodsContext.Provider value={{homeProducts, addItem}}>
         <Route path="/home-goods">
           <HomeGoods />
         </Route>
+        </HomeGoodsContext.Provider>
+        <BeautyContext.Provider value={{beautyProducts, addItem}}>
         <Route path="/beauty">
           <Beauty />
         </Route>
+        </BeautyContext.Provider>
+        <CollectiblesContext.Provider value={{collectProducts, addItem}}>
         <Route path="/collectibles">
           <Collectibles />
         </Route>
+        </CollectiblesContext.Provider>
+        <CartContext.Provider value={{cart}}>
         <Route path="/shopping-cart">
           <Cart />
         </Route>
+        </CartContext.Provider>
       </Switch>
       <StyledFooter>
         <StyledCopyright>HoneyPot<span>{'\u00A9'}</span></StyledCopyright>
