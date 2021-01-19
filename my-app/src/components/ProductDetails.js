@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ProductContainer = styled.article `
     width: 200px;
     height: 500px;
-    margin: 50px 20px;
+    margin: 20px;
 `
 
 const ProductImg = styled.img `
@@ -27,6 +27,11 @@ const Sale = styled.p `
     color: #C8251D;
 `
 
+const Description = styled.p `
+    text-align: left;
+    font-style: italic;
+    padding: 5px 0;
+`
 
 const ProductDetails = props => {
   return (
@@ -36,7 +41,7 @@ const ProductDetails = props => {
       <ProductTitle>{props.product.name}</ProductTitle>
       <OriginalPrice>${props.product.originalPrice}</OriginalPrice>
       <Sale>${props.product.salePrice}</Sale>
-      <p>Description: {props.product.description}</p>
+      <Description>Description: {props.product.description}</Description>
 
       <button onClick={() => props.addItem(props.product)}>Add to cart</button>
     </ProductContainer>
