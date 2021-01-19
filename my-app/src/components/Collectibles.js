@@ -11,6 +11,9 @@ const ProductsPage = styled.section `
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: "Lato";
+    @media(min-width: 800px) {
+        margin: 40px 200px 60px 200px;
+    }
 `
 
 const Collectibles = () => {

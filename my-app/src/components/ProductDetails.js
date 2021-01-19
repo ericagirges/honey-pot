@@ -5,6 +5,7 @@ import styled from "styled-components";
 const ProductContainer = styled.article `
     width: 200px;
     height: 500px;
+    margin: 50px 20px;
 `
 
 const ProductImg = styled.img `
