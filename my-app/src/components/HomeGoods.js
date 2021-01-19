@@ -5,7 +5,6 @@ import ProductDetails from "./ProductDetails";
 
 // styling for accessories pages starts here
 const ProductsPage = styled.section `
-    height: 90vh;
     margin: 40px auto 60px auto;
     display: flex;
     flex-wrap: wrap;
