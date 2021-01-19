@@ -33,11 +33,17 @@ const Description = styled.p `
     padding: 5px 0;
 `
 
+const ImageContainer = styled.div `
+    height: 250px;
+    width: 100%;
+`
+
 const ProductDetails = props => {
   return (
     <ProductContainer>
+      <ImageContainer>
       <ProductImg src={props.product.productImg} alt={`${props.product.name}`} />
-
+      </ImageContainer>
       <ProductTitle>{props.product.name}</ProductTitle>
       <OriginalPrice>${props.product.originalPrice}</OriginalPrice>
       <Sale>${props.product.salePrice}</Sale>
