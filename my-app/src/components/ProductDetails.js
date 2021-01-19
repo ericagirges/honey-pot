@@ -10,7 +10,20 @@ const ProductContainer = styled.article `
 const ProductImg = styled.img `
     width: 100%;
     height: auto;
+`
 
+const ProductTitle = styled.h2 `
+    padding: 10px 0;
+`
+
+const OriginalPrice = styled.p `
+    text-decoration: line-through;
+    font-weight: 700;
+`
+
+const Sale = styled.p `
+    font-weight: 700;
+    color: #C8251D;
 `
 
 
@@ -19,9 +32,9 @@ const ProductDetails = props => {
     <ProductContainer>
       <ProductImg src={props.product.productImg} alt={`${props.product.name}`} />
 
-      <h2>{props.product.name}</h2>
-      <p>${props.product.originalPrice}</p>
-      <p>${props.product.salePrice}</p>
+      <ProductTitle>{props.product.name}</ProductTitle>
+      <OriginalPrice>${props.product.originalPrice}</OriginalPrice>
+      <Sale>${props.product.salePrice}</Sale>
       <p>Description: {props.product.description}</p>
 
       <button onClick={() => props.addItem(props.product)}>Add to cart</button>

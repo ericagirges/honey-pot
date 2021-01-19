@@ -1,22 +1,23 @@
 import "./App.css";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import { accessories, home, collectibles, beauty } from "./data/dummyData";
 
+// context imports
 import BeautyContext from "./contexts/BeautyContext";
 import CollectiblesContext from "./contexts/CollectiblesContext";
 import AccessoriesContext from "./contexts/AccessoriesContext";
 import HomeGoodsContext from "./contexts/HomeGoodsContext";
 import CartContext from "./contexts/CartContext";
 
+// components
 import LandingPage from "./components/LandingPage";
 import Accessories from "./components/Accessories";
 import HomeGoods from "./components/HomeGoods";
 import Beauty from "./components/Beauty";
 import Collectibles from "./components/Collectibles";
 import Cart from "./components/Cart";
-
 
 // styling for heading/nav starts
 const StyledHeader = styled.header`
@@ -27,33 +28,33 @@ const StyledHeader = styled.header`
   font-family: "Lato";
   font-size: 1em;
   font-weight: 700;
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     height: 150px;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px 0 5px 0;
-  } 
+  }
   /* background-color: #d8cdc3; */
 `;
 const FreeShipping = styled.p`
   width: 180px;
   color: #5b3610;
   display: block;
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
 
 const StyledLogo = styled.img`
   width: 200px;
-  height: auto; 
+  height: auto;
 `;
 
 const CartIcon = styled.img`
   width: 40px;
   height: auto;
   padding: 0 60px;
-  @media(max-width: 600px) {
+  @media (max-width: 600px) {
     margin-bottom: 0;
     /* margin- */
   }
@@ -64,13 +65,13 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 2px solid #B19C87;
-  border-bottom: 2px solid #B19C87;
+  border-top: 2px solid #b19c87;
+  border-bottom: 2px solid #b19c87;
   margin-top: 20px;
   height: 70px;
   font-family: "Lato";
-  @media(max-width: 500px) {
-    font-size: 1.0em;
+  @media (max-width: 500px) {
+    font-size: 1em;
     flex-direction: column;
     flex-wrap: nowrap;
     height: 150px;
@@ -78,29 +79,29 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledH1 = styled.h1 `
-  @media(max-width: 600px) {
+const StyledH1 = styled.h1`
+  @media (max-width: 600px) {
     padding: 20px 0;
-  } 
-`
+  }
+`;
 
-const StyledFooter = styled.footer `
-  background-color: #B19C87;
+const StyledFooter = styled.footer`
+  background-color: #b19c87;
   width: 100%;
   height: 200px;
   display: flex;
   justify-content: space-between;
-`
+`;
 
-const StyledCopyright = styled.p `
+const StyledCopyright = styled.p`
   margin-top: 20px;
   margin-left: 20px;
   font-family: "Lato";
   color: white;
-  font-size: 1.0em;
-`
+  font-size: 1em;
+`;
 
-const StyledSocial = styled.section `
+const StyledSocial = styled.section`
   margin-top: 20px;
   margin-right: 70px;
   width: 200px;
@@ -108,7 +109,7 @@ const StyledSocial = styled.section `
   font-family: "Lato";
   color: white;
   font-size: 1.2em;
-`
+`;
 // styling for heading/nav ends
 
 function App() {
@@ -120,13 +121,10 @@ function App() {
   // adding items to cart state
   const [cart, setCart] = useState([]);
 
-  const addItem = item => {
-		// add the selected item to the cart
-		setCart([
-			...cart,
-			item
-		])
-	};
+  const addItem = (item) => {
+    // add the selected item to the cart
+    setCart([...cart, item]);
+  };
 
   return (
     <div className="App">
@@ -210,34 +208,36 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
-        <AccessoriesContext.Provider value={{accProducts, addItem}}>
-        <Route path="/accessories">
-          <Accessories />
+        <Route exact path="/accessories">
+          <AccessoriesContext.Provider value={{ accProducts, addItem }}>
+            <Accessories />
+          </AccessoriesContext.Provider>
         </Route>
-        </AccessoriesContext.Provider>
-        <HomeGoodsContext.Provider value={{homeProducts, addItem}}>
-        <Route path="/home-goods">
-          <HomeGoods />
+        <Route exact path="/home-goods">
+          <HomeGoodsContext.Provider value={{ homeProducts, addItem }}>
+            <HomeGoods />
+          </HomeGoodsContext.Provider>
         </Route>
-        </HomeGoodsContext.Provider>
-        <BeautyContext.Provider value={{beautyProducts, addItem}}>
-        <Route path="/beauty">
-          <Beauty />
+        <Route exact path="/beauty">
+          <BeautyContext.Provider value={{ beautyProducts, addItem }}>
+            <Beauty />
+          </BeautyContext.Provider>
         </Route>
-        </BeautyContext.Provider>
-        <CollectiblesContext.Provider value={{collectProducts, addItem}}>
-        <Route path="/collectibles">
-          <Collectibles />
+        <Route exact path="/collectibles">
+          <CollectiblesContext.Provider value={{ collectProducts, addItem }}>
+            <Collectibles />
+          </CollectiblesContext.Provider>
         </Route>
-        </CollectiblesContext.Provider>
-        <CartContext.Provider value={{cart}}>
-        <Route path="/shopping-cart">
-          <Cart />
+        <Route exact path="/shopping-cart">
+          <CartContext.Provider value={{ cart }}>
+            <Cart />
+          </CartContext.Provider>
         </Route>
-        </CartContext.Provider>
       </Switch>
       <StyledFooter>
-        <StyledCopyright>HoneyPot<span>{'\u00A9'}</span></StyledCopyright>
+        <StyledCopyright>
+          HoneyPot<span>{"\u00A9"}</span>
+        </StyledCopyright>
         <StyledSocial>
           <h6>Follow us</h6>
         </StyledSocial>

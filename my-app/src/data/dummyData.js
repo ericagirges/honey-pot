@@ -82,7 +82,7 @@ const collectibles = [
     {
         id: 110,
         name: "Funko Pop! Avatar Aang with Momo",
-        productImg: "/collectibles/Avatar-Aang-Funk-Pop.png",
+        productImg: "/collectibles/Avatar-Aang-Funko-Pop.png",
         originalPrice: "",
         salePrice: "",
         description: ""
