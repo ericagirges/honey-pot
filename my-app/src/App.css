@@ -2,3 +2,10 @@
   text-align: center;
 }
 
+.show-shipping {
+  display: block;
+}
+
+.hide-shipping {
+  display: none;
+}
