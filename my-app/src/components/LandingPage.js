@@ -9,7 +9,7 @@ const StyledPage = styled.div `
 
 const StyledH3 = styled.h3 `
     text-transform: uppercase;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: 700;
     margin: 20px auto;
     font-size: 1.4em;
@@ -34,7 +34,7 @@ const FlexSection = styled.section `
 `
 const StyledDiv = styled.div `
     width: 45%;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-size: 1.2em;
     @media(min-width: 600px){
         font-size: 1.5em;

@@ -9,7 +9,7 @@ const ProductsPage = styled.section `
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     @media(min-width: 800px) {
         margin: 40px 200px 60px 200px;
     }

@@ -25,7 +25,7 @@ const StyledHeader = styled.header`
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 1em;
   font-weight: 700;
   @media (max-width: 600px) {
@@ -69,7 +69,7 @@ const StyledNav = styled.nav`
   border-bottom: 2px solid #b19c87;
   margin-top: 20px;
   height: 70px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   @media (max-width: 500px) {
     font-size: 1em;
     flex-direction: column;
@@ -96,7 +96,7 @@ const StyledFooter = styled.footer`
 const StyledCopyright = styled.p`
   margin-top: 20px;
   margin-left: 20px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   color: white;
   font-size: 1em;
 `;
@@ -106,7 +106,7 @@ const StyledSocial = styled.section`
   margin-right: 70px;
   width: 200px;
   text-align: left;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   color: white;
   font-size: 1.2em;
 `;
