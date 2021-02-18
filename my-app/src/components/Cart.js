@@ -5,6 +5,10 @@ import styled from "styled-components";
 // Components
 import Item from "./ItemInCart";
 
+const CartContainer = styled.div `
+  font-family: "Lato", sans-serif;
+`
+
 const Cart = () => {
   const value = useContext(CartContext);
 
@@ -30,7 +34,7 @@ const Cart = () => {
   const { cartTotal, hasShipping } = getCartTotal();
 
   return (
-    <div>
+    <CartContainer>
       {value.cart.map((item) => (
         <Item key={item.id} {...item} />
       ))}
@@ -40,7 +44,7 @@ const Cart = () => {
         <p>Total: ${cartTotal}</p>
         <button>Checkout</button>
       </div>
-    </div>
+    </CartContainer>
   );
 };
 

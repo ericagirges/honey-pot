@@ -27,6 +27,20 @@ const StyledPrice = styled.p`
   margin: 5px 0;
 `;
 
+const RemoveButton = styled.div `
+  margin: 2px auto;
+  border: 2px solid #B09D86;
+  background-color: white;
+  font-family: "Lato", sans-serif;
+  padding: 1px 0;
+  &:hover {
+    transition: all 0.2s;
+    border: none;
+    background-color: #B09D86;
+    color: white;
+  }
+`
+
 const Item = (props) => {
   return (
     <ItemContainer>
@@ -35,7 +49,7 @@ const Item = (props) => {
       <ItemName>{props.name}</ItemName>
       <ItemDetails>
         <StyledPrice>$ {props.salePrice}</StyledPrice>
-        <button>Remove from cart</button>
+        <RemoveButton>Remove from cart</RemoveButton>
       </ItemDetails>
     </ItemContainer>
   );

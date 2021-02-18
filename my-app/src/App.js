@@ -141,7 +141,7 @@ function App() {
         </NavLink>
       </StyledHeader>
       <StyledNav>
-        <NavLink
+        <NavLink 
           style={{
             padding: "0 50px",
             textDecoration: "none",
@@ -154,7 +154,7 @@ function App() {
         >
           Deals
         </NavLink>
-        <NavLink
+        <NavLink 
           style={{
             padding: "0 50px",
             textDecoration: "none",
@@ -166,7 +166,7 @@ function App() {
         >
           Accessories
         </NavLink>
-        <NavLink
+        <NavLink 
           style={{
             padding: "0 50px",
             textDecoration: "none",
@@ -178,7 +178,7 @@ function App() {
         >
           Home
         </NavLink>
-        <NavLink
+        <NavLink 
           style={{
             padding: "0 50px",
             textDecoration: "none",
@@ -190,7 +190,7 @@ function App() {
         >
           Beauty
         </NavLink>
-        <NavLink
+        <NavLink 
           style={{
             padding: "0 50px",
             textDecoration: "none",
